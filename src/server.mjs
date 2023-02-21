@@ -1,10 +1,7 @@
 import SocketClient from './lib/socketClient.mjs';
 import express from "express";
-import cronjob from './cronjob.mjs';
 import handle from "./lib/handle.mjs";
-import bodyParser from 'body-parser';
 
-var jsonParser = bodyParser.json()
 const PORT = process.env.PORT || 8000;
 const app = express();
 app.get('/', async (req, res)  => {
@@ -12,221 +9,6 @@ app.get('/', async (req, res)  => {
 })
 
 app.listen(PORT, () => console.log('server running!'));
-//Job
-cronjob.SyncData();
-
-app.post('/syncDataClientVal', jsonParser,function (req, res) {
-    try{
-        var data = req.body;
-        var num = data.num;
-        if(num == 1)
-        {
-            handle.listArr1.length = 0;
-            handle.listArr1.push(...data.data);
-        }
-        if(num == 2)
-        {
-            handle.listArr2.length = 0;
-            handle.listArr2.push(...data.data);
-        }
-        if(num == 3)
-        {
-            handle.listArr3.length = 0;
-            handle.listArr3.push(...data.data);
-        }
-        if(num == 4)
-        {
-            handle.listArr4.length = 0;
-            handle.listArr4.push(...data.data);
-        }
-        if(num == 5)
-        {
-            handle.listArr5.length = 0;
-            handle.listArr5.push(...data.data);
-        }
-        if(num == 6)
-        {
-            handle.listArr6.length = 0;
-            handle.listArr6.push(...data.data);
-        }
-        if(num == 7)
-        {
-            handle.listArr7.length = 0;
-            handle.listArr7.push(...data.data);
-        }
-        if(num == 8)
-        {
-            handle.listArr8.length = 0;
-            handle.listArr8.push(...data.data);
-        }
-        if(num == 9)
-        {
-            handle.listArr9.length = 0;
-            handle.listArr9.push(...data.data);
-        }
-        if(num == 10)
-        {
-            handle.listArr10.length = 0;
-            handle.listArr10.push(...data.data);
-        }
-        if(num == 11)
-        {
-            handle.listArr11.length = 0;
-            handle.listArr11.push(...data.data);
-        }
-        if(num == 12)
-        {
-            handle.listArr12.length = 0;
-            handle.listArr12.push(...data.data);
-        }
-        if(num == 13)
-        {
-            handle.listArr13.length = 0;
-            handle.listArr13.push(...data.data);
-        }
-        if(num == 14)
-        {
-            handle.listArr14.length = 0;
-            handle.listArr14.push(...data.data);
-        }
-        if(num == 15)
-        {
-            handle.listArr15.length = 0;
-            handle.listArr15.push(...data.data);
-        }
-        if(num == 16)
-        {
-            handle.listArr16.length = 0;
-            handle.listArr16.push(...data.data);
-        }
-        if(num == 17)
-        {
-            handle.listArr17.length = 0;
-            handle.listArr17.push(...data.data);
-        }
-        if(num == 18)
-        {
-            handle.listArr18.length = 0;
-            handle.listArr18.push(...data.data);
-        }
-        if(num == 19)
-        {
-            handle.listArr19.length = 0;
-            handle.listArr19.push(...data.data);
-        }
-        if(num == 20)
-        {
-            handle.listArr20.length = 0;
-            handle.listArr20.push(...data.data);
-        }
-        if(num == 21)
-        {
-            handle.listArr21.length = 0;
-            handle.listArr21.push(...data.data);
-        }
-        if(num == 22)
-        {
-            handle.listArr22.length = 0;
-            handle.listArr22.push(...data.data);
-        }
-        if(num == 23)
-        {
-            handle.listArr23.length = 0;
-            handle.listArr23.push(...data.data);
-        }
-        if(num == 24)
-        {
-            handle.listArr24.length = 0;
-            handle.listArr24.push(...data.data);
-        }
-        if(num == 25)
-        {
-            handle.listArr25.length = 0;
-            handle.listArr25.push(...data.data);
-        }
-        if(num == 26)
-        {
-            handle.listArr26.length = 0;
-            handle.listArr26.push(...data.data);
-        }
-        if(num == 27)
-        {
-            handle.listArr27.length = 0;
-            handle.listArr27.push(...data.data);
-        }
-        if(num == 28)
-        {
-            handle.listArr28.length = 0;
-            handle.listArr28.push(...data.data);
-        }
-        if(num == 29)
-        {
-            handle.listArr29.length = 0;
-            handle.listArr29.push(...data.data);
-        }
-        if(num == 30)
-        {
-            handle.listArr30.length = 0;
-            handle.listArr30.push(...data.data);
-        }
-        if(num == 31)
-        {
-            handle.listArr31.length = 0;
-            handle.listArr31.push(...data.data);
-        }
-        if(num == 32)
-        {
-            handle.listArr32.length = 0;
-            handle.listArr32.push(...data.data);
-        }
-        if(num == 33)
-        {
-            handle.listArr33.length = 0;
-            handle.listArr33.push(...data.data);
-        }
-        if(num == 34)
-        {
-            handle.listArr34.length = 0;
-            handle.listArr34.push(...data.data);
-        }
-        if(num == 35)
-        {
-            handle.listAlistArr35rr17.length = 0;
-            handle.listArr35.push(...data.data);
-        }
-        if(num == 36)
-        {
-            handle.listArr36.length = 0;
-            handle.listArr36.push(...data.data);
-        }
-        if(num == 37)
-        {
-            handle.listArr37.length = 0;
-            handle.listArr37.push(...data.data);
-        }
-        if(num == 38)
-        {
-            handle.listArr38.length = 0;
-            handle.listArr38.push(...data.data);
-        }
-        if(num == 39)
-        {
-            handle.listArr39.length = 0;
-            handle.listArr39.push(...data.data);
-        }
-        if(num == 40)
-        {
-            handle.listArr40.length = 0;
-            handle.listArr40.push(...data.data);
-        }
-        return res.status(200).json({msg: "success", code: 1 });
-    }
-    catch(e)
-    {
-        console.log(e);
-        return res.status(200).json({msg: "error", code: -99 });
-    }
-});
 
 app.get('/current', function(req, res) {
     res.status(200).json({data: handle.listCurrent });
@@ -236,213 +18,122 @@ app.get('/mirror', function(req, res) {
     res.status(200).json({data: handle.listMirror });
 });
 
-app.get('/symbol/:num', function(req, res) {
-    var num = req.params.num;
-    if(num == 1)
-    return res.status(200).json({data: handle.listArr1 });
-    if(num == 2)
-    return res.status(200).json({data: handle.listArr2 });
-    if(num == 3)
-    return res.status(200).json({data: handle.listArr3 });
-    if(num == 4)
-    return res.status(200).json({data: handle.listArr4 });
-    if(num == 5)
-    return res.status(200).json({data: handle.listArr5 });
-    if(num == 6)
-    return res.status(200).json({data: handle.listArr6 });
-    if(num == 7)
-    return res.status(200).json({data: handle.listArr7 });
-    if(num == 8)
-    return res.status(200).json({data: handle.listArr8 });
-    if(num == 9)
-    return res.status(200).json({data: handle.listArr9 });
-    if(num == 10)
-    return res.status(200).json({data: handle.listArr10 });
-    if(num == 11)
-    return res.status(200).json({data: handle.listArr11 });
-    if(num == 12)
-    return res.status(200).json({data: handle.listArr12 });
-    if(num == 13)
-    return res.status(200).json({data: handle.listArr13 });
-    if(num == 14)
-    return res.status(200).json({data: handle.listArr14 });
-    if(num == 15)
-    return res.status(200).json({data: handle.listArr15 });
-    if(num == 16)
-    return res.status(200).json({data: handle.listArr16 });
-    if(num == 17)
-    return res.status(200).json({data: handle.listArr17 });
-    if(num == 18)
-    return res.status(200).json({data: handle.listArr18 });
-    if(num == 19)
-    return res.status(200).json({data: handle.listArr19 });
-    if(num == 20)
-    return res.status(200).json({data: handle.listArr20 });
-    if(num == 21)
-    return res.status(200).json({data: handle.listArr21 });
-    if(num == 22)
-    return res.status(200).json({data: handle.listArr22 });
-    if(num == 23)
-    return res.status(200).json({data: handle.listArr23 });
-    if(num == 24)
-    return res.status(200).json({data: handle.listArr24 });
-    if(num == 25)
-    return res.status(200).json({data: handle.listArr25 });
-    if(num == 26)
-    return res.status(200).json({data: handle.listArr26 });
-    if(num == 27)
-    return res.status(200).json({data: handle.listArr27 });
-    if(num == 28)
-    return res.status(200).json({data: handle.listArr28 });
-    if(num == 29)
-    return res.status(200).json({data: handle.listArr29 });
-    if(num == 30)
-    return res.status(200).json({data: handle.listArr30 });
-    if(num == 31)
-    return res.status(200).json({data: handle.listArr31 });
-    if(num == 32)
-    return res.status(200).json({data: handle.listArr32 });
-    if(num == 33)
-    return res.status(200).json({data: handle.listArr33 });
-    if(num == 34)
-    return res.status(200).json({data: handle.listArr34 });
-    if(num == 35)
-    return res.status(200).json({data: handle.listArr35 });
-    if(num == 36)
-    return res.status(200).json({data: handle.listArr36 });
-    if(num == 37)
-    return res.status(200).json({data: handle.listArr37 });
-    if(num == 38)
-    return res.status(200).json({data: handle.listArr38 });
-    if(num == 39)
-    return res.status(200).json({data: handle.listArr39 });
-    if(num == 40)
-    return res.status(200).json({data: handle.listArr40 });
-});
+new SocketClient('ftmusdt', 3600000); 
+new SocketClient('funusdt', 3601000); 
+new SocketClient('fxsusdt', 3602000); 
+new SocketClient('galausdt', 3603000); 
+new SocketClient('galusdt', 3604000); 
+new SocketClient('gbpusdt', 3605000); 
+new SocketClient('ghstusdt', 3606000); 
+new SocketClient('glmrusdt', 3607000); 
+new SocketClient('gmtusdt', 3608000); 
+new SocketClient('gmxusdt', 3609000); 
+new SocketClient('gnousdt', 3610000); 
+new SocketClient('grtusdt', 3611000); 
+new SocketClient('gtcusdt', 3612000); 
+new SocketClient('hardusdt', 3613000); 
+new SocketClient('hbarusdt', 3614000);
+new SocketClient('hftusdt', 3615000); 
+new SocketClient('highusdt', 3616000);  
+new SocketClient('hiveusdt', 3617000); 
+new SocketClient('hookusdt', 3618000); 
+new SocketClient('hotusdt', 3619000); 
+new SocketClient('icpusdt', 3620000); 
+new SocketClient('icxusdt', 3621000); 
+new SocketClient('idexusdt', 3622000); 
+new SocketClient('ilvusdt', 3623000); 
+new SocketClient('imxusdt', 3624000); 
+new SocketClient('injusdt', 3625000);
+new SocketClient('iostusdt', 3626000); 
+new SocketClient('iotausdt', 3627000); 
+new SocketClient('iotxusdt', 3628000); 
+new SocketClient('irisusdt', 3629000); 
+new SocketClient('jasmyusdt', 3630000); 
+new SocketClient('jstusdt', 3631000); 
+new SocketClient('audusdt', 3632000); 
+new SocketClient('juvusdt', 3633000); 
+new SocketClient('kavausdt', 3634000);
+new SocketClient('kdausdt', 3635000);
+new SocketClient('keyusdt', 3636000); 
+new SocketClient('klayusdt', 3637000); 
+new SocketClient('kmdusdt', 3638000); 
+new SocketClient('kncusdt', 3639000); 
 
-app.get('/count/:num', function(req, res) {
-    var num = req.params.num;
-    if(num == 1)
-    return res.status(200).json({count: handle.listArr1.length });
-    if(num == 2)
-    return res.status(200).json({count: handle.listArr2.length });
-    if(num == 3)
-    return res.status(200).json({count: handle.listArr3.length });
-    if(num == 4)
-    return res.status(200).json({count: handle.listArr4.length });
-    if(num == 5)
-    return res.status(200).json({count: handle.listArr5.length });
-    if(num == 6)
-    return res.status(200).json({count: handle.listArr6.length });
-    if(num == 7)
-    return res.status(200).json({count: handle.listArr7.length });
-    if(num == 8)
-    return res.status(200).json({count: handle.listArr8.length });
-    if(num == 9)
-    return res.status(200).json({count: handle.listArr9.length });
-    if(num == 10)
-    return res.status(200).json({count: handle.listArr10.length });
-    if(num == 11)
-    return res.status(200).json({count: handle.listArr11.length });
-    if(num == 12)
-    return res.status(200).json({count: handle.listArr12.length });
-    if(num == 13)
-    return res.status(200).json({count: handle.listArr13.length });
-    if(num == 14)
-    return res.status(200).json({count: handle.listArr14.length });
-    if(num == 15)
-    return res.status(200).json({count: handle.listArr15.length });
-    if(num == 16)
-    return res.status(200).json({count: handle.listArr16.length });
-    if(num == 17)
-    return res.status(200).json({count: handle.listArr17.length });
-    if(num == 18)
-    return res.status(200).json({count: handle.listArr18.length });
-    if(num == 19)
-    return res.status(200).json({count: handle.listArr19.length });
-    if(num == 20)
-    return res.status(200).json({count: handle.listArr20.length });
-    if(num == 21)
-    return res.status(200).json({count: handle.listArr21.length });
-    if(num == 22)
-    return res.status(200).json({count: handle.listArr22.length });
-    if(num == 23)
-    return res.status(200).json({count: handle.listArr23.length });
-    if(num == 24)
-    return res.status(200).json({count: handle.listArr24.length });
-    if(num == 25)
-    return res.status(200).json({count: handle.listArr25.length });
-    if(num == 26)
-    return res.status(200).json({count: handle.listArr26.length });
-    if(num == 27)
-    return res.status(200).json({count: handle.listArr27.length });
-    if(num == 28)
-    return res.status(200).json({count: handle.listArr28.length });
-    if(num == 29)
-    return res.status(200).json({count: handle.listArr29.length });
-    if(num == 30)
-    return res.status(200).json({count: handle.listArr30.length });
-    if(num == 31)
-    return res.status(200).json({count: handle.listArr31.length });
-    if(num == 32)
-    return res.status(200).json({count: handle.listArr32.length });
-    if(num == 33)
-    return res.status(200).json({count: handle.listArr33.length });
-    if(num == 34)
-    return res.status(200).json({count: handle.listArr34.length });
-    if(num == 35)
-    return res.status(200).json({count: handle.listArr35.length });
-    if(num == 36)
-    return res.status(200).json({count: handle.listArr36.length });
-    if(num == 37)
-    return res.status(200).json({count: handle.listArr37.length });
-    if(num == 38)
-    return res.status(200).json({count: handle.listArr38.length });
-    if(num == 39)
-    return res.status(200).json({count: handle.listArr39.length });
-    if(num == 40)
-    return res.status(200).json({count: handle.listArr40.length });
-});
+new SocketClient('kp3rusdt', 3640000); 
+new SocketClient('ksmusdt', 3641000); 
+new SocketClient('laziousdt', 3642000); 
+new SocketClient('ldousdt', 3643000); 
+new SocketClient('leverusdt', 3644000); 
+new SocketClient('linausdt', 3645000); 
+new SocketClient('linkusdt', 3646000); 
+new SocketClient('litusdt', 3647000); 
+new SocketClient('lokausdt', 3648000); 
+new SocketClient('lptusdt', 3649000); 
+new SocketClient('lrcusdt', 3650000); 
+new SocketClient('lskusdt', 365100); 
+new SocketClient('ltcusdt', 3652000); 
+new SocketClient('ltousdt', 3653000);
+new SocketClient('lunausdt', 3654000); 
+new SocketClient('luncusdt', 3655000); 
+new SocketClient('magicusdt', 3656000); 
+new SocketClient('manausdt', 3657000); 
+new SocketClient('maskusdt', 3658000); 
+new SocketClient('maticusdt', 3659000); 
+new SocketClient('mblusdt', 3660000); 
+new SocketClient('mboxusdt', 3661000); 
+new SocketClient('mcusdt', 3662000); 
+new SocketClient('mdtusdt', 3663000); 
+new SocketClient('mdxusdt', 3664000); 
+new SocketClient('minausdt', 3665000);
+new SocketClient('mkrusdt', 3666000); 
+new SocketClient('mlnusdt', 3667000); 
+new SocketClient('mobusdt', 3668000); 
+new SocketClient('movrusdt', 3669000); 
+new SocketClient('mtlusdt', 3670000); 
+new SocketClient('multiusdt', 3671000); 
+new SocketClient('nbtusdt', 3672000); 
+new SocketClient('nearusdt', 3673000); 
+new SocketClient('neblusdt', 3674000);
+new SocketClient('neousdt', 3675000);
+new SocketClient('nexousdt', 3676000); 
 
-new SocketClient('balusdt', 1, 3600000); 
-new SocketClient('bandusdt', 2, 3605000); 
-new SocketClient('barusdt', 3, 3610000); 
-new SocketClient('batusdt', 4, 3615000); 
-new SocketClient('bchusdt', 5, 3620000); 
-new SocketClient('beamusdt', 6, 3625000); 
-new SocketClient('belusdt', 7, 3630000); 
-new SocketClient('betausdt', 8, 3635000); 
-new SocketClient('bicousdt', 9, 3640000); 
-new SocketClient('bifiusdt', 10, 3645000); 
-new SocketClient('blzusdt', 11, 3650000); 
-new SocketClient('bnbusdt', 12, 3655000); 
-new SocketClient('bntusdt', 13, 3660000); 
-new SocketClient('bnxusdt', 14, 3665000); 
-new SocketClient('bondusdt', 15, 3670000);
-new SocketClient('bswusdt', 16, 3675000); 
-new SocketClient('btcusdt', 17, 3680000); 
-new SocketClient('btsusdt', 18, 3685000); 
-new SocketClient('bttcusdt', 19, 3690000); 
-new SocketClient('burgerusdt', 20, 3695000); 
-new SocketClient('busdusdt', 21, 3700000); 
-new SocketClient('c98usdt', 22, 3705000); 
-new SocketClient('cakeusdt', 23, 3710000); 
-new SocketClient('celousdt', 24, 3715000); 
-new SocketClient('celrusdt', 25, 3720000); 
-new SocketClient('cfxusdt', 26, 3725000); 
-new SocketClient('chessusdt', 27, 3730000);
-new SocketClient('chrusdt', 28, 3735000); 
-new SocketClient('chzusdt', 29, 3740000); 
-new SocketClient('cityusdt', 30, 3745000); 
-new SocketClient('ckbusdt', 31, 3750000); 
-new SocketClient('clvusdt', 32, 3755000); 
-new SocketClient('cocosusdt', 33, 3760000); 
-new SocketClient('cotiusdt', 34, 3765000); 
-new SocketClient('crvusdt', 35, 3770000); 
-new SocketClient('ctkusdt', 36, 3775000);
-new SocketClient('ctsiusdt', 37, 3780000);
-new SocketClient('ctxcusdt', 38, 3785000); 
-new SocketClient('cvpusdt', 39, 3790000); 
-new SocketClient('cvxusdt', 40, 3795000); 
-
-
+new SocketClient('nknusdt', 3677000); 
+new SocketClient('nmrusdt', 3678000); 
+new SocketClient('nulsusdt', 3679000); 
+new SocketClient('oceanusdt', 3680000); 
+new SocketClient('ognusdt', 3681000); 
+new SocketClient('ogusdt', 3682000); 
+new SocketClient('omgusdt', 3683000); 
+new SocketClient('omusdt', 3684000); 
+new SocketClient('oneusdt', 3685000); 
+new SocketClient('ongusdt', 3686000); 
+new SocketClient('ontusdt', 3687000); 
+new SocketClient('ookiusdt', 3688000); 
+new SocketClient('opusdt', 3689000); 
+new SocketClient('ornusdt', 3690000); 
+new SocketClient('osmousdt', 3691000); 
+new SocketClient('oxtusdt', 3692000); 
+new SocketClient('paxgusdt', 3693000);
+new SocketClient('peopleusdt', 3694000); 
+new SocketClient('perlusdt', 3695000); 
+new SocketClient('perpusdt', 3696000); 
+new SocketClient('phausdt', 3697000); 
+new SocketClient('phbusdt', 3698000); 
+new SocketClient('plausdt', 3699000); 
+new SocketClient('pntusdt', 3700000); 
+new SocketClient('polsusdt', 3701000); 
+new SocketClient('polyxusdt', 3702000); 
+new SocketClient('pondusdt', 3703000); 
+new SocketClient('portousdt', 3704000); 
+new SocketClient('powrusdt', 3705000);
+new SocketClient('psgusdt', 3706000); 
+new SocketClient('pundixusdt', 3707000); 
+new SocketClient('pyrusdt', 3708000); 
+new SocketClient('qiusdt', 3709000); 
+new SocketClient('qntusdt', 3710000); 
+new SocketClient('qtumusdt', 3711000); 
+new SocketClient('quickusdt', 3712000); 
+new SocketClient('radusdt', 3713000); 
+new SocketClient('rareusdt', 3714000);
+new SocketClient('rayusdt', 3715000);
+new SocketClient('reefusdt', 3716000); 
